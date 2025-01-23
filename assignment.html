@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cascading Effects</title>
+        <style>
+            body {
+                background-image: url(piano\ background.jpg);
+                background-size: 500px 300px;
+                background-color: #cccccc;
+                background-attachment:scroll;
+                background-repeat: no-repeat;
+            }
+
+            #gradient {
+                height: 400px;
+                background-image: linear-gradient(to bottom right, blueviolet, purple, indigo, navy, blue)
+            }
+
+            /* The animation code */
+            @keyframes example {
+                0% {background-color: pink;}
+                25% {background-color: violet;}
+                50% {background-color: blueviolet;}
+                75% {background-color: purple;}
+                100% {background-color: indigo}
+            }
+
+            /* The element to apply the animation to */
+            #animation {
+                width: 100px;
+                height: 100px;
+                background-color: indigo;
+                animation-name: example;
+                animation-duration: 10s;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <svg width="400" height="400">
+            <polygon points="110, 10, 50, 198, 200, 78, 30, 78, 170, 198" style="fill: rgb(190, 190, 190); stroke: rgb(160, 160, 160); stroke-width: 5; fill-rule:evenodd;" />
+        </svg>
+        <div id="animation">
+            Hello.
+        </div>
+        <br><br>
+        <div id="gradient" style="text-align: center; margin: auto; color: white; font-size: 40px; font-weight:bold;">
+        <br><br><br><br><br><br><br><br><br><br>
+        <svg width="500" height="600">
+            <rect width="400" height="200" style="fill:rgb(0, 0, 255); stroke-width: 15; stroke:rgb(0, 0, 128);" />
+        </svg>
+    </body>
+</html>
